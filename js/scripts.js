@@ -147,7 +147,7 @@ $(document).ready(function () {
 
     for (var i = 0; i < share_bar.length; i++) {
         var html = '<iframe allowtransparency="true" frameborder="0" scrolling="no"' +
-            'src="https://platform.twitter.com/widgets/tweet_button.html?url=' + encodeURIComponent(window.location) + '&amp;text=' + encodeURIComponent(document.title) + '&amp;via=ramswarooppatra&amp;hashtags=ramandantara&amp;count=horizontal"' +
+            'src="https://platform.twitter.com/widgets/tweet_button.html?url=' + encodeURIComponent(window.location) + '&amp;text=' + encodeURIComponent(document.title) + '&amp;via=justinhorner&amp;hashtags=hornerhusbands&amp;count=horizontal"' +
             'style="width:105px; height:21px;">' +
             '</iframe>' +
 
@@ -237,15 +237,15 @@ $(document).ready(function () {
 
 // Google map
 function initMap() {
-    var itc_kol = {lat: 22.5932759, lng: 88.27027720000001};
+    var phx = {lat: 33.3653514, lng: -111.7755532};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
-        center: itc_kol,
+        center: phx,
         scrollwheel: false
     });
 
     var marker = new google.maps.Marker({
-        position: itc_kol,
+        position: phx,
         map: map
     });
 }
