@@ -16,7 +16,7 @@
     <meta name="theme-color" content="#ffffff">
     <meta property="og:title" content="Justin & Meg are getting hitched">
     <meta property="og:description" content="We would like to invite you to our big day.">
-    <meta property="og:image" content="https://hornerhusbands.com/img/hero-min.jpg">
+    <meta property="og:image" content="https://husbandshorner.com/img/hero-min.jpg">
     <meta property="og:type" content="website">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -49,11 +49,14 @@
                             <li><a href="#events">Events</a></li>
                             <li><a href="#instagram">Instagram</a></li>
                             <li><a href="#eng-pics">Engagement</a></li>
-                            <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the city</a></li>
+                            <li class="hidden-sm hidden-xs"><a href="#video-bg">PHX Wedding</a></li>
+                            <li class="hidden-sm hidden-xs"><a href="#video-bg-tn">TN Reception</a></li>
                         </ul>
                         <ul class="member-actions">
-                            <li><a href="#map" class="login">Venue</a></li>
+                            <li><a href="#map" class="login">PHX Venue</a></li>
+                            <li><a href="#map-tn" class="login">TN Venue</a></li>
                             <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
+                            <li><a href="#rsvp-tn" class="btn-white btn-small">RSVP TN</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -91,6 +94,7 @@
                 <h3>We are getting hitched</h3>
                 <p>The date is 13<sup>th</sup> of April '19 and we would like you to be a part of
                     it.</p>
+                <h3>We are also having a reception in Tennessee to celebrate for anyone who cannot attend the wedding ceremony.</h3>
                 <div class="share-bar"></div>
             </div>
         </div>
@@ -108,7 +112,8 @@
             <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
                 <div class="wp3">
                     <p><strong>12th April</strong></p>
-
+                </div>
+                <div class="wp6">
                     <h5>Rehearsal <span class="time">4PM - 7PM</span></h5>
                     <p>Practice.</p>
                 </div>
@@ -121,6 +126,17 @@
                     <h5>Wedding <span class="time">5PM-12AM</span></h5>
                     <p>This is the main event in the entire wedding when the bride and the groom tie the
                         knot.</p>
+                </div>
+            </div>
+        </div>
+        <div clas="row">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="wp3">
+                    <p><strong>25th May</strong></p>
+                </div>
+                <div class="wp6">
+                    <h5>Tennessee reception <span class="time">11AM</span></h5>
+                    <p>Join us in Tennessee to celebrate our wedding.</p>
                 </div>
             </div>
         </div>
@@ -180,7 +196,7 @@
             <div class="col-md-12 text-center">
                 <h3>A picture is worth a thousand words!</h3>
                 <p>Help us capture the moment, tag your photos with the hashtag
-                    <a href="https://www.instagram.com/explore/tags/hornerhusbands/" target="_blank">#HornerHusbands</a>
+                    <a href="https://www.instagram.com/explore/tags/husbandshorner/" target="_blank">#HusbandsHorner</a>
                 </p>
             </div>
         </div>
@@ -331,7 +347,6 @@
 </section>
 
 <section class="rsvp text-center" id="rsvp">
-
     <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -352,7 +367,134 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <h3>What are you waiting for?</h3>
+                <p>RSVP for our wedding in Arizona!</p>
                 <p>We would greatly appreciate if you could RSVP before 1st of March '19</p>
+                <form id="rsvp-form" class="rsvp-form"
+                      action=""
+                      method="POST">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
+                                                                     placeholder="Your email"
+                                                                     required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i><input name="name" class=""
+                                                                 placeholder="Your name"
+                                                                 required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
+                                                                  max="4"
+                                                                  placeholder="Husband/Wife or kids"
+                                                                  required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
+                                                                class="" min="0"
+                                                                placeholder="Invite code"
+                                                                required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" id="alert-wrapper"></div>
+                    </div>
+                    <button class="btn-fill rsvp-btn">
+                        Yes,
+                        that's me!
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="video-bg-tn" class="hidden-sm hidden-xs">
+    <div id="bgndVideoTN" class="player"
+         data-property="{videoURL:'https://youtu.be/2W8rd6XIgQ4',containment:'#video-bg-tn',autoPlay:true, mute:true, showControls:false, startAt:1, stopAt:259, opacity:1}">
+    </div>
+    <div id="video-content">
+        <h5>Knoxville</h5>
+        <p>Home of VOLS</p>
+    </div>
+</section>
+
+<section id="map-tn" class="section-padding">
+    <div class="text-center">
+        <h3>Tennessee Reception</h3>
+        <p>Here is information on our Tennessee reception!</p>
+    </div>
+    <div id="map-canvas"></div>
+    <div id="map-content-wrapper" class="container pointer-events-none">
+        <div class="row">
+            <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">
+                <div class="text-center">
+                    <div id="btn-show-content" class="toggle-map-content pointer-events-auto">
+                        <i class="fa fa-info-circle"></i>&nbsp;&nbsp; Show info
+                    </div>
+                </div>
+                <div id="map-content" class="pointer-events-auto">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Gibbs Ruritan</h5>
+                            <p>7827 Tazewell Pike, Corryton, TN 37721</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Justin Horner</h5>
+                            <p><i class="fa fa-mobile"></i> <a href="tel://+18652361769">1-865-236-1769</a><br>
+                                <i class="fa fa-mobile"></i> <a href="mailto:mail@justinhorner.me?subject=Wedding-Site">mail@justinhorner.me</a></p>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md-6" style="padding: 5px;">
+                            <a class="btn btn-fill btn-small"
+                               href="https://m.uber.com/ul/?action=setPickup&client_id=Yh7Dl6SjB56RY2JuuZF8ttVa6ryFV78W&pickup=my_location&dropoff[formatted_address]=703%2C%20East%20Country%20Plaza%20South%2C%20Gilbert%2C%20AZ%2085234&dropoff[latitude]=33.3653514&dropoff[longitude]=-111.7755532"><i
+                                    class="fa fa-taxi"></i>&nbsp;&nbsp;Book Uber</a>
+                        </div>
+                        <div class="col-md-6" style="padding: 5px;">
+                            <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show
+                                map</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="rsvp text-center" id="rsvp-tn">
+    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                    </button>
+                    <div class="section-padding">
+                        <h3>Thank you!</h3>
+                        <p>We are glad to see you join us on our big day.</p>
+                        <div id="add-to-cal"></div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h3>What are you waiting for?</h3>
+                <p>RSVP for our reception in Tennessee!</p>
+                <p>We would greatly appreciate if you could RSVP before 1st of April '19</p>
                 <form id="rsvp-form" class="rsvp-form"
                       action=""
                       method="POST">
