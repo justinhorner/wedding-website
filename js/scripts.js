@@ -216,12 +216,12 @@ $(document).ready(function () {
         $.post('https://script.google.com/macros/s/AKfycbyE94uj3t3h3j7UxVscFhQ_dSnDacs0RqUQDk-FTwekAbbjRYs/exec', data)
         .done(function (data) {
             console.log(data);
-            $('#alert-wrapper').html('');
-            $('#rsvp-modal').modal('show');
+            $('#alert-wrapper-az').html('');
+            $('#rsvp-modal-az').modal('show');
         })
         .fail(function (data) {
             console.log(data);
-            $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
+            $('#alert-wrapper-az').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
         });
     });
 
@@ -233,12 +233,12 @@ $(document).ready(function () {
         $.post('https://script.google.com/macros/s/AKfycbyE94uj3t3h3j7UxVscFhQ_dSnDacs0RqUQDk-FTwekAbbjRYs/exec', data)
         .done(function (data) {
             console.log(data);
-            $('#alert-wrapper').html('');
-            $('#rsvp-modal').modal('show');
+            $('#alert-wrapper-tn').html('');
+            $('#rsvp-modal-tn').modal('show');
         })
         .fail(function (data) {
             console.log(data);
-            $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
+            $('#alert-wrapper-tn').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
         });
     });
 
