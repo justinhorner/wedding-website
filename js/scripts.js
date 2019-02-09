@@ -211,7 +211,6 @@ $(document).ready(function () {
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
         var data = $(this).serialize();
-        data += "location=AZ";
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
         $.post('https://script.google.com/macros/s/AKfycbz7R8UcnlybES8etfFvdjpWjye4tOy5F9jqCtGN/exec', data)
@@ -229,7 +228,6 @@ $(document).ready(function () {
     $('#rsvp-form-tn').on('submit', function (e) {
         e.preventDefault();
         var data = $(this).serialize();
-        data += "location=TN";
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
         $.post('https://script.google.com/macros/s/AKfycbz7R8UcnlybES8etfFvdjpWjye4tOy5F9jqCtGN/exec', data)
