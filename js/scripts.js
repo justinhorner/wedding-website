@@ -213,7 +213,7 @@ $(document).ready(function () {
         var data = $(this).serialize();
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
-        $.post('https://script.google.com/macros/s/AKfycbz7R8UcnlybES8etfFvdjpWjye4tOy5F9jqCtGN/exec', data)
+        $.post('https://script.google.com/macros/s/AKfycbyE94uj3t3h3j7UxVscFhQ_dSnDacs0RqUQDk-FTwekAbbjRYs/exec', data)
         .done(function (data) {
             console.log(data);
             $('#alert-wrapper').html('');
@@ -230,7 +230,7 @@ $(document).ready(function () {
         var data = $(this).serialize();
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
-        $.post('https://script.google.com/macros/s/AKfycbz7R8UcnlybES8etfFvdjpWjye4tOy5F9jqCtGN/exec', data)
+        $.post('https://script.google.com/macros/s/AKfycbyE94uj3t3h3j7UxVscFhQ_dSnDacs0RqUQDk-FTwekAbbjRYs/exec', data)
         .done(function (data) {
             console.log(data);
             $('#alert-wrapper').html('');
