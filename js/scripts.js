@@ -161,18 +161,64 @@ $(document).ready(function () {
         share_bar[i].style.display = 'inline-block';
     }
 
+    /********************** Guests helper */
+    $('#guestAZ').change(function() {
+        var guests = this.value;
+        var guestInputs = '';
+        if (guests && guests > 0) {
+            //foreach guest, add a input for First & last Name
+            var guestsInt = parseInt(guests);
+            while (guestsInt > 0) {
+                guestInputs += '<div class="form-input-group">'
+                + '<i class="fa fa-users"></i>'
+                + '<input name="guest' + guestsInt + 'FirstName" class="" placeholder="Guest ' + guestsInt + ' First name" required></div>'
+                + '<div class="form-input-group">'
+                + '<i class="fa fa-user"></i><input name="guest' + guestsInt + 'LastName" class="" placeholder="Guest ' + guestsInt + ' Last name" required></div>';
+                guestsInt = guestsInt - 1;
+            }
+        }
+        $('#guestAZInputs').html(guestInputs);
+    })
+
+    $('#guestTN').change(function() {
+        var guests = this.value;
+        var guestInputs = '';
+        if (guests && guests > 0) {
+            //foreach guest, add a input for First & last Name
+            var guestsInt = parseInt(guests);
+            while (guestsInt > 0) {
+                guestInputs += '<div class="form-input-group">'
+                + '<i class="fa fa-users"></i>'
+                + '<input name="guest' + guestsInt + 'FirstName" class="" placeholder="Guest ' + guestsInt + ' First name" required></div>'
+                + '<div class="form-input-group">'
+                + '<i class="fa fa-user"></i><input name="guest' + guestsInt + 'LastName" class="" placeholder="Guest ' + guestsInt + ' Last name" required></div>';
+                guestsInt = guestsInt - 1;
+            }
+        }
+        $('#guestTNInputs').html(guestInputs);
+    })
+
     /********************** Embed youtube video *********************/
     $('.player').YTPlayer();
 
 
     /********************** Toggle Map Content **********************/
-    $('#btn-show-map').click(function () {
-        $('#map-content').toggleClass('toggle-map-content');
-        $('#btn-show-content').toggleClass('toggle-map-content');
+    $('#btn-show-map-az').click(function () {
+        $('#map-content-az').toggleClass('toggle-map-content');
+        $('#btn-show-content-az').toggleClass('toggle-map-content');
     });
-    $('#btn-show-content').click(function () {
-        $('#map-content').toggleClass('toggle-map-content');
-        $('#btn-show-content').toggleClass('toggle-map-content');
+    $('#btn-show-content-az').click(function () {
+        $('#map-content-az').toggleClass('toggle-map-content');
+        $('#btn-show-content-az').toggleClass('toggle-map-content');
+    });
+
+    $('#btn-show-map-tn').click(function () {
+        $('#map-content-tn').toggleClass('toggle-map-content');
+        $('#btn-show-content-tn').toggleClass('toggle-map-content');
+    });
+    $('#btn-show-content-tn').click(function () {
+        $('#map-content-tn').toggleClass('toggle-map-content');
+        $('#btn-show-content-tn').toggleClass('toggle-map-content');
     });
 
     /********************** Add to Calendar **********************/
@@ -249,9 +295,16 @@ $(document).ready(function () {
 // Google map
 function initMap() {
     var phx = {lat: 33.3653514, lng: -111.7755532};
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+    var tn = {lat: 36.136978, lng: -83.857218};
+    var map = new google.maps.Map(document.getElementById('map-canvas-az'), {
         zoom: 15,
         center: phx,
+        scrollwheel: false
+    });
+
+    var mapTn =  new google.maps.Map(document.getElementById('map-canvas-tn'), {
+        zoom: 15,
+        center: tn,
         scrollwheel: false
     });
 
@@ -259,19 +312,10 @@ function initMap() {
         position: phx,
         map: map
     });
-}
 
-function initBBSRMap() {
-    var la_fiesta = {lat: 33.3653514, lng: -111.7755532};
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 15,
-        center: la_fiesta,
-        scrollwheel: false
-    });
-
-    var marker = new google.maps.Marker({
-        position: la_fiesta,
-        map: map
+    var markerTn = new google.maps.Marker({
+        position: tn,
+        map: mapTn
     });
 }
 

@@ -230,11 +230,11 @@
         border-radius: 0;
     }
 
-    #map-content-wrapper {
+    #map-content-wrapper-az #map-content-wrapper-tn {
         margin-bottom: 40px;
     }
     
-    #map-content {
+    #map-content-az #map-content-tn{
         margin-top: 0;
         padding: 35px;
     }
@@ -265,7 +265,7 @@
         top: 10px;
         right: 10px; }
 
-    #map-content-wrapper {
+    #map-content-wrapper-az #map-content-wrapper-tn {
         margin-bottom: 0;
     }
     
