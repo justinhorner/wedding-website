@@ -296,7 +296,7 @@ $(document).ready(function () {
 function initMap() {
     var phx = {lat: 33.3653514, lng: -111.7755532};
     var tn = {lat: 36.136978, lng: -83.857218};
-    var map = new google.maps.Map(document.getElementById('map-canvas-az'), {
+    var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: phx,
         scrollwheel: false
