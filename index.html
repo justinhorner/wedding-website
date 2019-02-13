@@ -427,31 +427,28 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 col-sm-6">
+                        <div class="col-md-12 col-sm-12">
                             <div class="form-input-group">
-                                <i class="fa fa-users"></i><input id="guestAZ" type="number" name="extras" class="" min="0"
-                                                                  max="4"
-                                                                  placeholder="Guests"
-                                                                  required>
-                                                                  <input name="location" value="AZ" hidden />
+                                    <i class="fa fa-users"></i>
+                                <select style="margin-top: 10pt; margin-left: 50pt" class="custom-select guestAZ" name="guestsAZ" id="guestAZ" required>
+                                    <option value="" disabled selected>Choose your number of guests...</option>
+                                    <option name="guests" value="0">None</option>
+                                    <option name="guests" value="1">One</option>
+                                    <option name="guests" value="2">Two</option>
+                                    <option name="guests" value="3">Three</option>
+                                    <option name="guests" value="4">Four</option>
+                                </select>
                             </div>
                         </div>
+                    </div>
+                    <div class="row" id="guestAZInputRow">
                         <div id="guestAZInputs" class="col-md-6 col-sm-6" />
-                        <!-- <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Invite code"
-                                                                required>
-                            </div>
-                        </div> -->
                     </div>
                     <div class="row">
                         <div class="col-md-12" id="alert-wrapper-az"></div>
                     </div>
                     <button class="btn-fill rsvp-btn">
-                        Yes,
-                        that's me!
+                        RSVP for AZ Reception
                     </button>
                 </form>
             </div>
@@ -545,31 +542,28 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 col-sm-6">
+                        <div class="col-md-12 col-sm-12">
                             <div class="form-input-group">
-                                <i class="fa fa-users"></i><input id="guestTN" type="number" name="extras" class="" min="0"
-                                                                  max="4"
-                                                                  placeholder="Guests"
-                                                                  required>
-                                                            <input name="location" value="TN" hidden />
+                                    <i class="fa fa-users"></i>
+                                <select style="margin-top: 10pt; margin-left: 50pt" class="custom-select guestTN" name="guestsTN" id="guestTN" required>
+                                    <option value="" disabled selected>Choose your number of guests...</option>
+                                    <option name="guests" value="0">None</option>
+                                    <option name="guests" value="1">One</option>
+                                    <option name="guests" value="2">Two</option>
+                                    <option name="guests" value="3">Three</option>
+                                    <option name="guests" value="4">Four</option>
+                                </select>
                             </div>
                         </div>
+                    </div>
+                    <div class="row" id="guestAZInputRow">
                         <div id="guestTNInputs" class="col-md-6 col-sm-6" />
-                        <!-- <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Invite code"
-                                                                required>
-                            </div>
-                        </div> -->
                     </div>
                     <div class="row">
                         <div class="col-md-12" id="alert-wrapper-tn"></div>
                     </div>
                     <button class="btn-fill rsvp-btn">
-                        Yes,
-                        that's me!
+                        RSVP for TN Reception
                     </button>
                 </form>
             </div>

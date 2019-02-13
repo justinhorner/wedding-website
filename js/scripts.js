@@ -161,8 +161,8 @@ $(document).ready(function () {
         share_bar[i].style.display = 'inline-block';
     }
 
-    /********************** Guests helper */
-    $('#guestAZ').change(function() {
+    /********************** Guests helper ******************/
+    $('.guestAZ').change(function() {
         var guests = this.value;
         var guestInputs = '';
         if (guests && guests > 0) {
@@ -170,7 +170,7 @@ $(document).ready(function () {
             var guestsInt = parseInt(guests);
             while (guestsInt > 0) {
                 guestInputs += '<div class="form-input-group">'
-                + '<i class="fa fa-users"></i>'
+                + '<i class="fa fa-user"></i>'
                 + '<input name="guest' + guestsInt + 'FirstName" class="" placeholder="Guest ' + guestsInt + ' First name" required></div>'
                 + '<div class="form-input-group">'
                 + '<i class="fa fa-user"></i><input name="guest' + guestsInt + 'LastName" class="" placeholder="Guest ' + guestsInt + ' Last name" required></div>';
